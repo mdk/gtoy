@@ -1,0 +1,327 @@
+2006-11-28  Michael Dominic K.  <mdk@mdk.am> 
+
+	* autogen.sh: Fixing the missing m4 include directory.
+
+	* configure.ac: Adding a conditional variable --with-examples to
+	enable/disable example building (switched off by default).
+
+	* examples/Makefile.am: Don't parse directories if BUILD_EXAMPLES is
+	not set.
+	
+	* examples/example-01/Makefile.am:
+	* examples/example-02/Makefile.am:
+	* examples/example-03/Makefile.am:
+	* examples/example-04/Makefile.am:
+	* examples/example-05/Makefile.am:
+	* examples/example-06/Makefile.am:
+	* examples/example-07/Makefile.am:
+	* examples/example-08/Makefile.am:
+	* examples/example-09/Makefile.am:
+	* examples/example-10/Makefile.am: Fixing the Makefile.am missing
+	dashes.
+
+2006-11-28  Michael Dominic K.  <mdk@mdk.am> 
+
+	* examples/: Changing the example naming (adding leading 0). 
+
+2006-11-28  Michael Dominic K.  <mdk@mdk.am> 
+
+	* autogen.sh: A small fix for autogen not to complain about missing
+	params when running in NOCONFIGURE mode.
+
+2006-11-19  Michael Dominic K.  <mdk@mdk.am> 
+
+	*   configure.ac:
+	*   examples/Makefile.am:
+	*   examples/example-7/:
+	*   examples/example-7/Makefile.am:
+	*   examples/example-7/flute.c:
+	*   examples/example-7/flute.h:
+	*   examples/example-7/guitar.c:
+	*   examples/example-7/guitar.h:
+	*   examples/example-7/instrument.c:
+	*   examples/example-7/instrument.h:
+	*   examples/example-7/main.c: Adding example-7 that shows (very
+	basic) errot checking in gtoy -- in other words, what happens when you
+	try to use an object as another object.
+
+2006-11-19  Michael Dominic K.  <mdk@mdk.am> 
+
+	*   src/gtoy-errors.h: Fixing a small typo in INVALID_CAST error
+	message.
+
+	*   src/gtoy-object.c: Adding a cast check during get_top method
+	operation.
+
+2006-11-15  Michael Dominic K.  <mdk@mdk.am> 
+
+	* AUTHORS: Updating the e-mail addr.
+
+2006-11-15  Michael Dominic K.  <mdk@mdk.am> 
+
+	* HACKING: Adding.
+
+2006-11-14  Michael Dominic K.  <mdk@mdk.am> 
+
+	* pkgconfig/gtoy.pc.in: Adding a proper pkgconfig dependency.
+
+2006-11-14  Michael Dominic K.  <mdk@mdk.am> 
+
+	* src/gtoy-types.h: Adding a GTOY_PAD_POINTER padding variable and
+	adding some padding to all existing structs.
+
+2006-11-07  Michael Dominic K.  <mdk@mdk.am> 
+
+	* configure.ac:
+	* examples/Makefile.am:
+	* examples/example-9:
+	* examples/example-9/Makefile.am:
+	* examples/example-9/dispatcher.c:
+	* examples/example-9/dispatcher.h:
+	* examples/example-9/main.c:
+	* examples/example-9/tv.c:
+	* examples/example-9/tv.h: Adding new example9 that shows how to
+	build a simple event system. 
+
+	* src/gtoy-object-type.c: Fixing a bug that would result in object
+	being reported as non-castable to itself.
+
+2006-11-06  Michael Dominic K.  <mdk@mdk.am> 
+
+	* configure.ac:
+	* examples/Makefile.am:
+	* examples/example-6:
+	* examples/example-6/Makefile.am:
+	* examples/example-6/box.c:
+	* examples/example-6/box.h:
+	* examples/example-6/container.c:
+	* examples/example-6/container.h:
+	* examples/example-6/main.c: Adding example6 that shows more advanced
+	init/dispose chaining.
+
+2006-11-04  Michael Dominic K.  <mdk@mdk.am> 
+
+	* src/gtoy-object.c:
+	* src/gtoy-object.h: Fixing the logic to be able to chain the virtual
+	base-methods.
+
+	* examples/example-2/margarhita.c:
+	* examples/example-8/dragon.c: Fixing the examples to use the new
+	logic.
+
+2006-11-04  Michael Dominic K.  <mdk@mdk.am> 
+
+	* src/gtoy-object-type.c:
+	* src/gtoy-object.c: More magic pointers fixing, nasty pointers.
+
+2006-11-04  Michael Dominic K.  <mdk@mdk.am> 
+
+	* src/gtoy-object.c: Correcing some bad pointer magic (bad array
+	traversal)
+
+2006-11-04  Michael Dominic K.  <mdk@mdk.am> 
+
+	* Makefile.am:
+	* configure.ac:
+	* examples/Makefile.am: Creating a dummy directory Makefile.am so that
+	older automake/autoconf versions don't complain.
+	
+	* autogen.sh: Removing package-dependent strings. Just so that
+	somebody can copy this nice autoget into his project without any
+	changes.
+	
+	* src/Makefile.am: Minor cleanups.
+
+	* examples/example-8/dragon.c: 
+	* src/gtoy-types.h: Correcting compilation warnings resulting from
+	bad casting.
+
+2006-11-03  Michael Dominic K.  <mdk@mdk.am> 
+
+	* src/Makefile.am: Adding the proper flag to stamp the gtoy log
+	messages properly.
+
+2006-11-03  Michael Dominic K.  <mdk@mdk.am> 
+
+	* ./: Fixing the e-mail address.
+
+2006-11-03  Michael Dominic K.  <mdk@mdk.am> 
+
+	* examples/example-5/box.c: Correcting a tiny messaging error.
+
+	* Makefile.am:
+	* configure.ac:
+	* examples/example-8:
+	* examples/example-8/Makefile.am:
+	* examples/example-8/dragon.c:
+	* examples/example-8/dragon.h:
+	* examples/example-8/main.c:
+	* examples/example-8/monster.c:
+	* examples/example-8/monster.h: Adding a new example8 that
+	demonstrates how to override setters/getters.
+	
+	* src/gtoy-object-type.c: Correcting a serious bug that caused wrong
+	function to be overriden in subtype.
+
+2006-11-01  Michael Dominic K.  <mdk@mdk.am> 
+
+	* src/gtoy-errors.h: Adding this missing file with error message
+	templates. Non-installable.
+
+2006-11-01  Michael Dominic K.  <mdk@mdk.am> 
+
+	* ./: Fixing the copyright 2007 => 2006.
+
+2006-11-01  Michael Dominic K.  <mdk@mdk.am> 
+
+	* examples/example-4/flying.c: Set the interface name to Flying.
+
+	* src/gtoy-interface-type.c:
+	* src/gtoy-interface-type.h:
+	* src/gtoy-object-type.c:
+	* src/gtoy-object-type.h:
+	* src/gtoy-object.c:
+	* src/gtoy-object.h: Macrofying the error checking. Adding a function
+	to set the interface name.
+
+2006-10-31  Michael Dominic K.  <mdk@mdk.am> 
+
+	* src/gtoy-macros.h: Expand the gtoy return macros to standard
+	glib-style macros if GTOY_CLASSIC_WARNINGS is defined.
+
+2006-10-29  Michael Dominic K.  <mdk@mdk.am> 
+
+	* examples/example-5/Makefile.am: Correcting .c -> .h in
+	non-installable headers.
+
+	* src/Makefile.am:
+	* src/gtoy-macros.c:
+	* src/gtoy.h:
+	* src/gtoy-macros.h: Adding the standard messaging macros.
+
+	* Makefile.am:
+	* configure.ac:
+	* examples/example-10:
+	* examples/example-10/Makefile.am:
+	* examples/example-10/main.c: Adding new example that demonstrates the
+	usage of standard messaging macros.
+
+2006-10-26  Michael Dominic K.  <mdk@mdk.am> 
+
+	* Makefile.am:
+	* configure.ac:
+	* examples/example-5:
+	* examples/example-5/Makefile.am:
+	* examples/example-5/box.c:
+	* examples/example-5/box.h:
+	* examples/example-5/main.c: Adding example-5 that demonstrates how to
+	use init and dispose functions.
+
+2006-10-25  Michael Dominic K.  <mdk@mdk.am> 
+
+	* Makefile.am:
+	* configure.ac: 
+	* examples/example-4:
+	* examples/example-4/Makefile.am:
+	* examples/example-4/bird.c:
+	* examples/example-4/bird.h:
+	* examples/example-4/crow.c:
+	* examples/example-4/crow.h:
+	* examples/example-4/flying.c:
+	* examples/example-4/flying.h:
+	* examples/example-4/main.c: Adding one more example that shows
+	interface capabilities. 
+
+	* src/gtoy-interface-type.c: Fixing the issue with position not being
+	incremented. 
+
+	* src/gtoy-object-type.c: Fixing typo in checking if type implements
+	interface. 
+
+	* src/gtoy-object.c: Adding a comment about bug in interface method
+	resolution.
+
+2006-10-24  Michael Dominic K.  <mdk@mdk.am> 
+
+	* Makefile.am:
+	* configure.ac:
+	* examples/example-3:
+	* examples/example-3/Makefile.am:
+	* examples/example-3/bulldog.c:
+	* examples/example-3/bulldog.h:
+	* examples/example-3/cat.c:
+	* examples/example-3/cat.h:
+	* examples/example-3/dog.c:
+	* examples/example-3/dog.h:
+	* examples/example-3/main.c: Adding a 3 example that demonstrates how
+	to check object casting (what can be used as what).
+
+2006-10-24  Michael Dominic K.  <mdk@mdk.am> 
+
+	* examples/example-1/pizza.h:
+	* examples/example-2/main.c:
+	* examples/example-2/margarhita.h:
+	* examples/example-2/pizza.h: Adding the include bracketing to
+	prevent .h from being sourced twice.
+
+2006-10-23  Michael Dominic K.  <mdk@mdk.am> 
+
+	* Makefile.am:
+	* configure.ac:
+	* examples/example-2:
+	* examples/example-2/Makefile.am:
+	* examples/example-2/main.c:
+	* examples/example-2/margarhita.c:
+	* examples/example-2/margarhita.h:
+	* examples/example-2/pizza.c:
+	* examples/example-2/pizza.h: Adding second example showing how to
+	override methods and call base methods.
+
+2006-10-23  Michael Dominic K.  <mdk@mdk.am> 
+
+	
+	* examples/example-1/duck.c:
+	* examples/example-1/duck.h: Removing.
+
+	* examples/example-1/Makefile.am:
+	* examples/example-1/main.c:
+	* examples/example-1/pizza.c:
+	* examples/example-1/pizza.h: Introducing a more decent example using
+	Pizza paradigm. Adding proper license headers.
+
+2006-10-23  Michael Dominic K.  <mdk@mdk.am> 
+
+	* examples:
+	* examples/example-1:
+	* examples/example-1/Makefile.am:
+	* examples/example-1/duck.c:
+	* examples/example-1/duck.h:
+	* examples/example-1/main.c: Adding the no-installable examples
+	directory with one example.
+
+	* Makefile.am:
+	* configure.ac: Adding the necessary flags to compile examples.
+
+2006-10-22  Michael Dominic K.  <mdk@mdk.am> 
+
+	* src/gtoy-interface-type.c:
+	* src/gtoy-object-type.c:
+	* src/gtoy-object-type.h:
+	* src/gtoy-object.c:
+	* src/gtoy-object.h: Moving the magic into "private" C includes.
+	Fixing the issue with ref-counting.
+
+2006-10-22  Michael Dominic K.  <mdk@mdk.am> 
+
+	* src/Makefile.am: Adding a missing gtoy-types.h to installable
+	headers.
+
+2006-10-22  Michael Dominic K.  <mdk@mdk.am> 
+
+	* autogen.sh: Removing some confusing Gst# bits where the file was
+	originally taken from.
+
+2006-10-22  Michael Dominic K.  <mdk@mdk.am> 
+
+	[Initial import]
+
